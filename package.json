@@ -1,6 +1,6 @@
 {
   "name": "eacs-socket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extensible Access Control System. Socket library which provides a wrapper for WebSockets with JWT authentication.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

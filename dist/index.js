@@ -25,7 +25,8 @@ class EACSToken {
 exports.EACSToken = EACSToken;
 class EACSSocket extends WebSocket.Server {
     constructor(options) {
-        super(Object.assign({}, options, { verifyClient: (info, cb) => this.verifyClient(info, cb) }));
+        options = Object.assign({}, options, { verifyClient: (info, cb) => this.verifyClient(info, cb) });
+        super(options);
         this.options = options;
         if (!this.options.jwtPubKey)
             console.log('Warning: not using JWT authentication. Public key is missing.');

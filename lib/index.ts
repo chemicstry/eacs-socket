@@ -40,11 +40,12 @@ class EACSSocket extends WebSocket.Server
 
     constructor(options: EACSSocketOptions)
     {
-        super({
+        options = {
             ...<WebSocket.ServerOptions>options,
             verifyClient: (info, cb) => this.verifyClient(info, cb)
-        });
+        };
 
+        super(options);
         this.options = options;
 
         if (!this.options.jwtPubKey)
