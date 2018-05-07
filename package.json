@@ -1,9 +1,11 @@
 {
   "name": "eacs-socket",
   "version": "1.0.0",
-  "description": "Extensible Access Control System. Socket library which provides a wrapper for RPC over WebSockets with JWT authentication.",
-  "main": "index.js",
+  "description": "Extensible Access Control System. Socket library which provides a wrapper for WebSockets with JWT authentication.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/chemicstry/eacs-socket/issues"
   },
-  "homepage": "https://github.com/chemicstry/eacs-socket#readme"
+  "homepage": "https://github.com/chemicstry/eacs-socket#readme",
+  "dependencies": {
+    "@types/jsonwebtoken": "^7.2.7",
+    "jsonwebtoken": "^8.2.1",
+    "modular-json-rpc": "^1.0.6",
+    "ws": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^5.1.0",
+    "ts-node": "^6.0.3",
+    "typescript": "^2.8.3"
+  }
 }
